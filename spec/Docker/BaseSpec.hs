@@ -16,7 +16,7 @@ spec = do
             i <- nullInput
             o <- nullOutput
             makeConnection "localhost" (return ()) o i
-            
+
     describe "execDocker'" $ do
         context "when the computation fails" $ do
             it "returns the error and logs" $ do
