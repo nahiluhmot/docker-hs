@@ -12,8 +12,8 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  build-depends:       base ==4.6.*, bytestring ==0.10.*, http-streams ==0.7.*,
-                       mtl ==2.1.*, io-streams ==1.1.*, network ==2.4.*
+  build-depends:       base ==4.7.*, bytestring ==0.10.*, mtl ==2.2.*,
+                       transformers ==0.4.*
   exposed-modules:     Docker
   ghc-options:         -Wall
   default-language:    Haskell2010
@@ -22,8 +22,7 @@ test-suite spec
   hs-source-dirs:      src, spec
   main-is:             Spec.hs
   type:                exitcode-stdio-1.0
-  build-depends:       base ==4.6.*, bytestring ==0.10.*, http-streams ==0.7.*,
-                       mtl ==2.1.*, io-streams ==1.1.*, network ==2.4.*,
-                       hspec ==1.8.*
+  build-depends:       base ==4.7.*, bytestring ==0.10.*, mtl ==2.2.*,
+                       transformers ==0.4.*, hspec ==1.9.*
   ghc-options:         -Wall
   default-language:    Haskell2010
