@@ -1,7 +1,2 @@
--- | This module exports all of its child modules.
-module Docker ( module Docker.Base
-              , module Docker.QueryBuilder
-              ) where
-
-import Docker.Base
-import Docker.QueryBuilder
+-- | This is the top-level module for the library.
+module Docker () where
