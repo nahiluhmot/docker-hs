@@ -4,6 +4,7 @@ module Docker.Data ( DockerError(..)
                    ) where
 
 import qualified Data.ByteString as B
+import Network.Http.Client
 
 -- | This data type is used to represent errors throughout the library.
 data DockerError = InternalError B.ByteString
@@ -12,7 +13,8 @@ data DockerError = InternalError B.ByteString
                  deriving (Eq, Show)
 
 -- | This data type is used to hold the state of Docker computations.
-data DockerState = DockerState { auth :: Maybe (B.ByteString, B.ByteString)
-                               , host :: B.ByteString
-                               , port :: Int
-                               } deriving (Eq, Show)
+data DockerState =
+    DockerState { auth       :: Maybe ( B.ByteString, B.ByteString
+                                      , B.ByteString, B.ByteString)
+                , connection :: Connection
+                } deriving (Show)
